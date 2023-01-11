@@ -1,3 +1,7 @@
+# v0.8.0
+
+* Increase time resolution
+
 # v0.5.4
 
 * Add several new properties: `ViewFrom`, `Box`, `Corridor`,

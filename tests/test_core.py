@@ -1,4 +1,4 @@
-from czml3.core import Preamble
+from czmlpy.core import Preamble
 
 
 def test_empty_preamble_has_id_and_version():

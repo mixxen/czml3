@@ -4,7 +4,7 @@ import astropy.time
 import pytest
 from dateutil.tz import tzoffset
 
-from czml3.types import (
+from czmlpy.types import (
     Cartesian3Value,
     CartographicDegreesListValue,
     CartographicRadiansListValue,

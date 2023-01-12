@@ -2,8 +2,8 @@ import datetime as dt
 
 import pytest
 
-from czml3.enums import ArcTypes, ClassificationTypes, ShadowModes
-from czml3.properties import (
+from czmlpy.enums import ArcTypes, ClassificationTypes, ShadowModes
+from czmlpy.properties import (
     ArcType,
     Box,
     BoxDimensions,
@@ -39,7 +39,7 @@ from czml3.properties import (
     Uri,
     ViewFrom,
 )
-from czml3.types import (
+from czmlpy.types import (
     Cartesian3Value,
     CartographicDegreesListValue,
     DistanceDisplayConditionValue,

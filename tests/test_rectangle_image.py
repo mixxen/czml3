@@ -4,8 +4,8 @@ import tempfile
 
 import pytest
 
-from czml3 import Document, Packet, Preamble
-from czml3.properties import ImageMaterial, Material, Rectangle, RectangleCoordinates
+from czmlpy import Document, Packet, Preamble
+from czmlpy.properties import ImageMaterial, Material, Rectangle, RectangleCoordinates
 
 
 @pytest.fixture

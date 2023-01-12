@@ -1,6 +1,6 @@
 from io import StringIO
 
-from czml3 import Document, Packet
+from czmlpy import Document, Packet
 
 
 def test_document_has_expected_packets():

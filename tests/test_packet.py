@@ -3,9 +3,9 @@ from uuid import UUID
 
 import pytest
 
-from czml3 import CZML_VERSION, Packet, Preamble
-from czml3.enums import InterpolationAlgorithms, ReferenceFrames
-from czml3.properties import (
+from czmlpy import CZML_VERSION, Packet, Preamble
+from czmlpy.enums import InterpolationAlgorithms, ReferenceFrames
+from czmlpy.properties import (
     Billboard,
     Color,
     Ellipsoid,
@@ -28,7 +28,7 @@ from czml3.properties import (
     PositionList,
     SolidColorMaterial,
 )
-from czml3.types import Cartesian3Value, StringValue
+from czmlpy.types import Cartesian3Value, StringValue
 
 
 def test_preamble_has_proper_id_and_expected_version():

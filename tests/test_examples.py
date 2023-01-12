@@ -3,7 +3,7 @@ import os
 
 import pytest
 
-from czml3.examples import simple
+from czmlpy.examples import simple
 
 TESTS_DIR = os.path.dirname(os.path.realpath(__file__))
 

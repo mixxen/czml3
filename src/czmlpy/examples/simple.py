@@ -1,14 +1,14 @@
 import datetime as dt
 
-from czml3 import Document, Packet, Preamble
-from czml3.enums import (
+from czmlpy import Document, Packet, Preamble
+from czmlpy.enums import (
     HorizontalOrigins,
     InterpolationAlgorithms,
     LabelStyles,
     ReferenceFrames,
     VerticalOrigins,
 )
-from czml3.properties import (
+from czmlpy.properties import (
     Billboard,
     Clock,
     Color,
@@ -18,7 +18,7 @@ from czml3.properties import (
     Position,
     SolidColorMaterial,
 )
-from czml3.types import IntervalValue, Sequence, TimeInterval
+from czmlpy.types import IntervalValue, Sequence, TimeInterval
 
 accesses_id = "9927edc4-e87a-4e1f-9b8b-0bfb3b05b227"
 start = dt.datetime(2012, 3, 15, 10, tzinfo=dt.timezone.utc)

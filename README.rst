@@ -1,22 +1,7 @@
-:Name: czml3
+:Name: czmlpy
 :Authors: Juan Luis Cano Rodríguez, Eleftheria Chatziargyriou
 
-.. |circleci| image:: https://img.shields.io/circleci/project/github/poliastro/czml3/master.svg?style=flat-square&logo=circleci
-   :target: https://circleci.com/gh/poliastro/czml3
-
-.. |codecov| image:: https://img.shields.io/codecov/c/github/poliastro/czml3.svg?style=flat-square
-   :target: https://codecov.io/github/poliastro/czml3?branch=master
-
-.. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
-   :target: https://github.com/poliastro/czml3/raw/master/LICENSE
-
-.. |matrix| image:: https://img.shields.io/matrix/poliastro-czml:matrix.org.svg?style=flat-square
-   :alt: Join the chat at https://openastronomy.riot.im/#/room/#poliastro-czml:matrix.org
-   :target: https://openastronomy.riot.im/#/room/#poliastro-czml:matrix.org
-
-|circleci| |codecov| |license| |matrix|
-
-czml3 is a Python library to write CZML.
+czmlpy is a Python library to write CZML.
 
 What is CZML?
 =============
@@ -36,24 +21,24 @@ From the official
 Installation
 ============
 
-You can install czml3 using pip::
+You can install czmlpy using pip::
 
-  $ pip install czml3
+  $ pip install czmlpy
 
 or conda::
 
-  $ conda install czml3 --channel conda-forge
+  $ conda install czmlpy --channel conda-forge
 
-czml3 requires Python >= 3.7.
+czmlpy requires Python >= 3.7.
 
 Examples
 ========
 
 A CZML document is a list of *packets*, which have several properties.
-When using czml3 in an interactive interpreter,
+When using czmlpy in an interactive interpreter,
 all objects show as nice CZML (JSON)::
 
-  >>> from czml3 import Packet
+  >>> from czmlpy import Packet
   >>> print(Packet())
   {
       "id": "adae4d3a-7087-4fda-a70b-d18a262a890e"
@@ -69,7 +54,7 @@ all objects show as nice CZML (JSON)::
 
 And there are more complex examples available::
 
-  >>> from czml3.examples import simple
+  >>> from czmlpy.examples import simple
   >>> print(simple)
   [
       {
@@ -91,26 +76,21 @@ Jupyter widget
 
 You can easily display your CZML document using our interactive widget::
 
-  In [1]: from czml3.examples import simple
+  In [1]: from czmlpy.examples import simple
 
-  In [2]: from czml3.widget import CZMLWidget
+  In [2]: from czmlpy.widget import CZMLWidget
 
   In [3]: CZMLWidget(simple)
 
 And this would be the result:
 
-.. image:: https://raw.githubusercontent.com/poliastro/czml3/master/widget-screenshot.png
+.. image:: https://raw.githubusercontent.com/mixxen/czmlpy/master/widget-screenshot.png
 
 Support
 =======
 
-|matrix|
-
-If you find any issue on czml3 or have questions,
-please `open an issue on our repository <https://github.com/poliastro/czml3/issues/new>`_
-and join `our chat`_!
-
-.. _`our chat`: https://openastronomy.riot.im/#/room/#poliastro-czml:matrix.org
+If you find any issue on czmlpy or have questions,
+please `open an issue on our repository <https://github.com/mixxen/czmlpy/issues/new>`_
 
 Contributing
 ============
@@ -133,10 +113,13 @@ Before you send us a pull request, remember to reformat all the code::
 
 This will apply black, isort, and lots of love ❤️
 
+To build a wheel file, update version in setup.py and __init__.py, then::
+
+  $ python setup.py sdist bdist_wheel
+  $ twine upload --repository testpypi dist/*
+
 License
 =======
 
-|license|
-
-czml3 is released under the MIT license, hence allowing commercial
+czmlpy is released under the MIT license, hence allowing commercial
 use of the library. Please refer to the :code:`LICENSE` file.

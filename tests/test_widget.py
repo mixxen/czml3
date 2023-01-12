@@ -1,6 +1,6 @@
 import pytest
 
-from czml3.widget import CZMLWidget
+from czmlpy.widget import CZMLWidget
 
 
 def test_no_input_makes_empty_document():

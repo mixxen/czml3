@@ -2,6 +2,7 @@
 
 * Increase time resolution
 * Fork poliastro/czml3
+* Refactor name to czmlpy
 
 # v0.5.4
 

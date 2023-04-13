@@ -1,3 +1,9 @@
+# v0.9.0
+
+* Add forwardExtrapolationType and backwardExtrapolationType to Interpolatable.
+* Add DirectionList, Double, Integer, ConicSensor, CustomPatternSensor, RectangularSensor.
+* Add agi_conicSensor, agi_customPatternSensor, agi_rectangularSensor, agi_fan, agi_vector.
+
 # v0.8.0
 
 * Increase time resolution

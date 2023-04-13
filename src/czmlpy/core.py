@@ -53,6 +53,11 @@ class Packet(BaseCZMLObject):
     rectangle = attr.ib(default=None)
     tileset = attr.ib(default=None)
     wall = attr.ib(default=None)
+    agi_conicSensor = attr.ib(default=None)
+    agi_customPatternSensor = attr.ib(default=None)
+    agi_rectangularSensor = attr.ib(default=None)
+    agi_fan = attr.ib(default=None)
+    agi_vector  = attr.ib(default=None)
 
 
 @attr.s(str=False, frozen=True)

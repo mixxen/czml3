@@ -5,7 +5,7 @@ import datetime as dt
 
 import attr
 
-from .enums import InterpolationAlgorithms
+from .enums import InterpolationAlgorithms, ExtrapolationTypes
 
 
 @attr.s(str=False, frozen=True, kw_only=True)
@@ -26,3 +26,5 @@ class Interpolatable:
     epoch: dt.datetime | None = attr.ib(default=None)
     interpolationAlgorithm: InterpolationAlgorithms | None = attr.ib(default=None)
     interpolationDegree: int | None = attr.ib(default=None)
+    forwardExtrapolationType: ExtrapolationTypes | None = attr.ib(default=None)
+    backwardExtrapolationType: ExtrapolationTypes | None = attr.ib(default=None)

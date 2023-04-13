@@ -460,6 +460,16 @@ class PositionList(BaseCZMLObject, Deletable):
 
 
 @attr.s(str=False, frozen=True, kw_only=True)
+class DirectionList(BaseCZMLObject, Deletable):
+    """A list of positions."""
+
+    spherical = attr.ib(default=None)
+    unitSpherical = attr.ib(default=None)
+    cartesian = attr.ib(default=None)
+    unitCartesian = attr.ib(default=None)
+
+
+@attr.s(str=False, frozen=True, kw_only=True)
 class Ellipsoid(BaseCZMLObject):
     """A closed quadric surface that is a three-dimensional analogue of an ellipse."""
 
@@ -723,3 +733,114 @@ class Uri(BaseCZMLObject, Deletable):
 
     def to_json(self):
         return self.uri
+
+
+@attr.s(str=False, frozen=True, kw_only=True)
+class Double(BaseCZMLObject, Interpolatable, Deletable):
+
+    number = attr.ib(default=None)
+    reference = attr.ib(default=None)
+
+
+@attr.s(str=False, frozen=True, kw_only=True)
+class Integer(BaseCZMLObject, Interpolatable, Deletable):
+
+    number = attr.ib(default=None)
+    reference = attr.ib(default=None)
+
+
+
+@attr.s(str=False, frozen=True, kw_only=True)
+class ConicSensor(BaseCZMLObject):
+
+    show = attr.ib(default=None)
+    innerHalfAngle = attr.ib(default=None)
+    outerHalfAngle = attr.ib(default=None)
+    minimumClockAngle = attr.ib(default=None)
+    maximumClockAngle = attr.ib(default=None)
+    radius = attr.ib(default=None)
+    showIntersection = attr.ib(default=None)
+    intersectionColor = attr.ib(default=None)
+    intersectionWidth = attr.ib(default=None)
+    showLateralSurfaces = attr.ib(default=None)
+    lateralSurfaceMaterial = attr.ib(default=None)
+    showEllipsoidSurfaces = attr.ib(default=None)
+    ellipsoidSurfaceMaterial = attr.ib(default=None)
+    showEllipsoidHorizonSurfaces = attr.ib(default=None)
+    ellipsoidHorizonSurfaceMaterial = attr.ib(default=None)
+    showDomeSurfaces = attr.ib(default=None)
+    domeSurfaceMaterial = attr.ib(default=None)
+    portionToDisplay = attr.ib(default=None)
+    environmentConstraint = attr.ib(default=None)
+    showEnvironmentOcclusion = attr.ib(default=None)
+    environmentOcclusionMaterial = attr.ib(default=None)
+    showEnvironmentIntersection = attr.ib(default=None)
+    environmentIntersectionColor = attr.ib(default=None)
+    environmentIntersectionWidth = attr.ib(default=None)
+    showThroughEllipsoid = attr.ib(default=None)
+    showViewshed = attr.ib(default=None)
+    viewshedVisibleColor = attr.ib(default=None)
+    viewshedOccludedColor = attr.ib(default=None)
+    viewshedResolution = attr.ib(default=None)
+
+@attr.s(str=False, frozen=True, kw_only=True)
+class CustomPatternSensor(BaseCZMLObject):
+
+    show = attr.ib(default=None)
+    directions = attr.ib(default=None)
+    radius = attr.ib(default=None)
+    showIntersection = attr.ib(default=None)
+    intersectionColor = attr.ib(default=None)
+    intersectionWidth = attr.ib(default=None)
+    showLateralSurfaces = attr.ib(default=None)
+    lateralSurfaceMaterial = attr.ib(default=None)
+    showEllipsoidSurfaces = attr.ib(default=None)
+    ellipsoidSurfaceMaterial = attr.ib(default=None)
+    showEllipsoidHorizonSurfaces = attr.ib(default=None)
+    ellipsoidHorizonSurfaceMaterial = attr.ib(default=None)
+    showDomeSurfaces = attr.ib(default=None)
+    domeSurfaceMaterial = attr.ib(default=None)
+    portionToDisplay = attr.ib(default=None)
+    environmentConstraint = attr.ib(default=None)
+    showEnvironmentOcclusion = attr.ib(default=None)
+    environmentOcclusionMaterial = attr.ib(default=None)
+    showEnvironmentIntersection = attr.ib(default=None)
+    environmentIntersectionColor = attr.ib(default=None)
+    environmentIntersectionWidth = attr.ib(default=None)
+    showThroughEllipsoid = attr.ib(default=None)
+    showViewshed = attr.ib(default=None)
+    viewshedVisibleColor = attr.ib(default=None)
+    viewshedOccludedColor = attr.ib(default=None)
+    viewshedResolution = attr.ib(default=None)
+
+
+@attr.s(str=False, frozen=True, kw_only=True)
+class RectangularSensor(BaseCZMLObject):
+
+    show = attr.ib(default=None)
+    xHalfAngle = attr.ib(default=None)
+    yHalfAngle = attr.ib(default=None)
+    radius = attr.ib(default=None)
+    showIntersection = attr.ib(default=None)
+    intersectionColor = attr.ib(default=None)
+    intersectionWidth = attr.ib(default=None)
+    showLateralSurfaces = attr.ib(default=None)
+    lateralSurfaceMaterial = attr.ib(default=None)
+    showEllipsoidSurfaces = attr.ib(default=None)
+    ellipsoidSurfaceMaterial = attr.ib(default=None)
+    showEllipsoidHorizonSurfaces = attr.ib(default=None)
+    ellipsoidHorizonSurfaceMaterial = attr.ib(default=None)
+    showDomeSurfaces = attr.ib(default=None)
+    domeSurfaceMaterial = attr.ib(default=None)
+    portionToDisplay = attr.ib(default=None)
+    environmentConstraint = attr.ib(default=None)
+    showEnvironmentOcclusion = attr.ib(default=None)
+    environmentOcclusionMaterial = attr.ib(default=None)
+    showEnvironmentIntersection = attr.ib(default=None)
+    environmentIntersectionColor = attr.ib(default=None)
+    environmentIntersectionWidth = attr.ib(default=None)
+    showThroughEllipsoid = attr.ib(default=None)
+    showViewshed = attr.ib(default=None)
+    viewshedVisibleColor = attr.ib(default=None)
+    viewshedOccludedColor = attr.ib(default=None)
+    viewshedResolution = attr.ib(default=None)
